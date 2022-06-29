@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(133, 24, 24); */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.form {
+  float: left;
+}
+
+/* STYLING THE SEARCH FIELD */
+.search {
+  width: 20%;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0.5rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 8px;
+}
+
+/* STYLING THE PLACEHOLDER ATTRIBUTE OF THE SEARCH FIELD */
+.search::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+/* STYLING THE SEARCH FIELD WHEN IT IS CLICKED ON USING THE :focus PSEUDOELEMENT */
+.search:focus {
+  outline: none;
+  background-color: rgb(133, 24, 24);
+}
+
+/* THE MAIN WILL HOLD ALL OF THE MOVIE CARDS */
+/* THE LAYOUT IS SET USING FLEXBOX */
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: rgb(155, 58, 58);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-description {
+  color: rgb(248, 247, 247);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-description h3 {
+  margin-top: 0;
+}
+
+.movie-description span {
+  background-color: rgb(133, 24, 24);
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+.movie-description span.green {
+  color: rgb(0, 255, 13);
+}
+
+.movie-description span.orange {
+  color: orange;
+}
+
+.movie-description span.red {
+  color: red;
+}
+
+.overview {
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+/*=====[NAVIGATION BAR]=======================================================================================================================================*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  padding: 2px;
+}
+
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right; /* PUSHES THE SECTIONS TO START FROM THE RIGHT OF THE NAVBAR */
+}
+
+nav ul {
+  list-style: none; /* REMOVING THE BULLET POINTS FROM THE UL */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block; /* ALLOWS SECTIONS TO APPEAR SIDE BY SIDE */
+  text-align: center; /* ALIGNING THE TEXT WITHIN EACH NAV SECTION */
+  margin-left: 50px; /* ADDING SPACING BETWEEN SECTIONS */
+  padding-top: 5px; /* ADDING SPACING BETWEEN THE TEXT AND THE TOP */
+  position: relative;
+}
+
+nav ul li.active {
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+nav ul li a {
+  text-decoration: none; /* REMOVES THE UNDERLINE FROM THE LINKS */
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: rgb(179, 73, 73);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+}
+
+.logo {
+  width: 43px;
+  height: 43px;
+}
+
+/*=====================================================================================================================================================*/
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-top: none;
+  background-color: rgb(0, 0, 0);
+}
