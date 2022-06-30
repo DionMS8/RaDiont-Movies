@@ -43,7 +43,7 @@ header {
 /* STYLING THE SEARCH FIELD WHEN IT IS CLICKED ON USING THE :focus PSEUDOELEMENT */
 .search:focus {
   outline: none;
-  background-color: rgb(133, 24, 24);
+  background-color: rgb(50, 147, 162);
 }
 
 /* THE MAIN WILL HOLD ALL OF THE MOVIE CARDS */
@@ -57,7 +57,7 @@ header {
 .movie {
   width: 300px;
   margin: 1rem;
-  background-color: rgb(155, 58, 58);
+  background-color: rgb(50, 147, 162);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   position: relative;
